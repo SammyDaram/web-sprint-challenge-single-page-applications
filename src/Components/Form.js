@@ -19,6 +19,16 @@ const Form = (props) => {
             <div>
                 <h1>Build your own pizza</h1>
                 <h1>Build Your Own Pizza</h1>
+
+                <label>Name&nbsp;
+                    <input
+                        value={values.name}
+                        onChange={onChange}
+                        name='name'
+                        type='text'
+                        placeholder="What name do you want on the order?"
+                    />
+                </label>
                 {/* //////drop down for your size of pizza////// */}
                 {/* //////drop down for your size of pizza////// */}
                 {/* //////drop down for your size of pizza////// */}
@@ -222,7 +232,12 @@ const Form = (props) => {
                         type='text'
                         placeholder="Anything else you'd like to add?"
                     />
-                </label>  
+                </label>
+
+                <label>When do you want your order?
+                    <input type="date"/>
+                    <input type="time"/>
+                </label>
             </div>
 
         </form>
