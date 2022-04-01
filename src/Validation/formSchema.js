@@ -5,9 +5,10 @@ const formSchema = yup.object().shape({
         .string()
         .trim()
         .required("name is required!")
-        .min(3, "name must be three characters long"),
+        .min(2, "name must be at least 2 characters"),
     size: yup
-        .required("size is required"),
+        .string()
+        .oneOf(["small", "medium", "large"], "Please pick a size"),
     sauce: yup
         .string()
         .oneOf(["Original Red", "Garlic Ranch", "BBQ Sauce", "Spinach Alfredo"], "You can only pick one")
@@ -25,7 +26,10 @@ const formSchema = yup.object().shape({
     artichokeHearts: yup.boolean(),
     threeCheese: yup.boolean(),
     pineapple: yup.boolean(),
-    extraCheese: yup.boolean()
+    extraCheese: yup.boolean(),
+    instructions: yup
+        .string()
+        .trim()
 })
 
-export default formSchema
+export default formSchema;

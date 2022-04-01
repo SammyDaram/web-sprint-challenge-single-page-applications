@@ -1,7 +1,7 @@
 import React from "react";
 
 const Form = (props) => {
-    const {values, submit, change} = props;
+    const {values, submit, change, errors} = props;
 
     const onSubmit = evt => {
         evt.preventDefault()
@@ -15,13 +15,21 @@ const Form = (props) => {
     }
     return (
         <form className="form container" onSubmit={onSubmit}>
-
             <div>
-                <h1>Build your own pizza</h1>
-                <h1>Build Your Own Pizza</h1>
+                <div className='errors'>
+                    {/* 🔥 RENDERING THE VALIDATION ERRORS HERE */}
+                    <div>{errors.name}</div>
+                    <div>{errors.size}</div>
+                    <div>{errors.sauce}</div>
+                    <div>{errors.instructions}</div>
+                </div>
+            </div>
 
-                <label>Name&nbsp;
-                    <input
+             <div>
+                <h1>Build your own pizza</h1>
+
+                <label>Name
+                    <input id="name-input"
                         value={values.name}
                         onChange={onChange}
                         name='name'
@@ -33,11 +41,11 @@ const Form = (props) => {
                 {/* //////drop down for your size of pizza////// */}
                 {/* //////drop down for your size of pizza////// */}
                 <label>Choice of Size
-                    <select value={values.size} name="size" onChange={onChange}>
+                    <select id="size-dropdown" value={values.size} name="size" onChange={onChange}>
                         <option value="">-- Select --</option>
-                        <option value="Small">Student</option>
-                        <option value="Medium">Instructor</option>
-                        <option value="Large">Alumni</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
                     </select>
                 </label>
                 {/* //////Radio Buttons////// */}
@@ -89,7 +97,7 @@ const Form = (props) => {
                 {/* //////CHECKBOXES////// */}
                 {/* //////CHECKBOXES////// */}
                 {/* //////CHECKBOXES////// */}
-                <label>Add Toppings
+                <div>Add Toppings
 
 
                     <label>Pepperoni
@@ -219,13 +227,13 @@ const Form = (props) => {
                     </label>
 
                 
-                </label>
+                </div>
                 {/* //////Special Instructions Texts////// */}
                 {/* //////Special Instructions Texts////// */}
                 {/* //////Special Instructions Texts////// */}
 
                 <label>Special Instructions&nbsp;
-                    <input
+                    <input id="special-text"
                         value={values.instructions}
                         onChange={onChange}
                         name='instructions'
