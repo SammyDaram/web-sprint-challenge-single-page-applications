@@ -120,18 +120,18 @@ const App = () => {
       <nav>
         <div className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="/pizza">Pizza</Link>
-          <Link to="/order-pizza">Order</Link>
+          <Link to="/order-pizza">Order Pizza</Link>
+          <Link to="/pizza-form">Pizza</Link>
         </div>  
       </nav>
       
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/order">
+      <Route exact path="/pizza-form">
         <Form />
       </Route>
-      <Route path="/pizza">
+      <Route exact path="/pizza">
         <Pizza />
       </Route>
 

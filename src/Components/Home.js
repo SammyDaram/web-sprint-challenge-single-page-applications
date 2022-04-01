@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
     const routeToOrder = () => {
-        
+
     }
     return (
         <div >
@@ -16,7 +16,7 @@ const Home = () => {
                 onClick={routeToOrder}
                 id="order-pizza"
             >
-                Order Pizza?
+                Order Pizza
             </button>
         </div>
     )
