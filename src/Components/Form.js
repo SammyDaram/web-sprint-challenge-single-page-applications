@@ -1,7 +1,7 @@
 import React from "react";
 
 const Form = (props) => {
-    const {values, submit, change, errors} = props;
+    const {values, submit, change, errors, disabled} = props;
 
     const onSubmit = evt => {
         evt.preventDefault()
@@ -14,8 +14,9 @@ const Form = (props) => {
         change(name, valueToUse)
     }
     return (
-        <form className="form container" onSubmit={onSubmit}>
+        <form id="pizza-form" onSubmit={onSubmit}>
             <div>
+            <button disabled={disabled}>submit</button>
                 <div className='errors'>
                     {/* 🔥 RENDERING THE VALIDATION ERRORS HERE */}
                     <div>{errors.name}</div>
@@ -247,7 +248,9 @@ const Form = (props) => {
                     <input type="time"/>
                 </label>
             </div>
-
+            <button id="order-button">
+                Add to order
+            </button>
         </form>
               
     )

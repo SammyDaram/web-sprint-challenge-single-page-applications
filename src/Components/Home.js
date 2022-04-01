@@ -2,10 +2,10 @@ import React from "react";
 
 const Home = () => {
     const routeToOrder = () => {
-
+        
     }
     return (
-        <div>
+        <div >
             <h2>Your favorite food, delivered while coding</h2>
             <img 
                 className="home-image"
@@ -16,7 +16,7 @@ const Home = () => {
                 onClick={routeToOrder}
                 id="order-pizza"
             >
-                Pizza?
+                Order Pizza?
             </button>
         </div>
     )
