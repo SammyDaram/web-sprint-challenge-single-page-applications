@@ -120,20 +120,19 @@ const App = () => {
       <nav>
         <div className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="/order-pizza">Order Pizza</Link>
-          <Link to="/pizza-form">Pizza</Link>
         </div>  
       </nav>
+        
       
       <Route exact path="/">
         <Home />
       </Route>
-      <Route exact path="/pizza-form">
+      {/* <Route  exact path="/pizza-form">
         <Form />
-      </Route>
-      <Route exact path="/pizza">
+      </Route> */}
+      {/* <Route  exact path="/pizza">
         <Pizza />
-      </Route>
+      </Route> */}
 
     </>
   );

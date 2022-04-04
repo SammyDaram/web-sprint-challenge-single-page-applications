@@ -1,9 +1,9 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+// import history from '../../history';
 
 const Home = () => {
-    const routeToOrder = () => {
-
-    }
+    const history = useHistory();
     return (
         <div >
             <h2>Your favorite food, delivered while coding</h2>
@@ -13,8 +13,10 @@ const Home = () => {
                 alt=""
             />
             <button
-                onClick={routeToOrder}
-                id="order-pizza"
+               id="order-pizza"
+               onClick={()=> {
+                   history.push('./pizza');
+               }}
             >
                 Order Pizza
             </button>
@@ -23,3 +25,6 @@ const Home = () => {
 }
 
 export default Home
+
+
+

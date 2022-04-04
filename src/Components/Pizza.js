@@ -2,7 +2,7 @@ import React from "react";
 
 const Pizza = () => {
     return (
-        <div id="pizza">
+        <div>
             <h2>Congrats! Pizza is on its way</h2>
             <img 
                 className=""
